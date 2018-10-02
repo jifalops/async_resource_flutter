@@ -64,5 +64,3 @@ class ResourceWidget<T> extends StatelessWidget {
     );
   }
 }
-
-class ResourceReloader<T> extends
