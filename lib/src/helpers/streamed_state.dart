@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/widgets.dart';
 
-/// Helper class for [State] of a widget that manages stream(s).
+/// A base class for the [State] of a widget that manages stream(s).
 abstract class StreamedState<T extends StatefulWidget> extends State<T> {
   /// Create [Stream]s and [StreamController]s, setup [StreamSubscription]s.
   ///

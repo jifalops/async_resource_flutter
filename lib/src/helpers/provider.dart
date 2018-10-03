@@ -41,7 +41,10 @@ class _ResourceProviderRootState<T>
       ResourceProvider<T>(resource: resource, child: widget.child);
 
   @override
-  void initStreams() => resource = widget.onInit();
+  void initStreams() {
+    resource = widget.onInit();
+    resource.sink.add(false);
+  }
 
   @override
   void disposeStreams() => resource.dispose();
