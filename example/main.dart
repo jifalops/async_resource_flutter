@@ -1,26 +1,5 @@
-# async_resource_flutter
-
-Flutter plugin for async_resource. Automatically cache network resources and use them when offline.
-
-See https://pub.dartlang.org/packages/async_resource.
-
-## Examples
-
-### SharedPrefsResource examples
-
-```dart
-final stringRes = StringPrefsResource('string');
-final boolRes = BoolPrefsResource('bool');
-final intRes = IntPrefsResource('int');
-final doubleRes = DoublePrefsResource('double');
-final stringListRes = StringListPrefsResource('list');
-```
-
-### Flutter examples
-
-This is taken from the [working example](https://github.com/jifalops/async_resource/blob/master/example/packages/mobile/lib/main.dart).
-
-```dart
+// See the working example at
+// https://github.com/jifalops/async_resource/blob/master/example/packages/mobile/lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:async_resource_flutter/async_resource_flutter.dart';
 // import 'package:async_resource_example/config.dart';
@@ -253,4 +232,3 @@ class _StreamedPostsWithoutHelpersState
     resource = StreamedResource(resources.posts);
   }
 }
-```

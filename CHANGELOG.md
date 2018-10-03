@@ -1,3 +1,3 @@
-## [0.1.0] - October 2, 2018
+## [0.1.0] - October 3, 2018
 
-* First release.
+* First release. Interchangeable with the now deprecated `shared_prefs_resource`.

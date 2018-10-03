@@ -8,7 +8,8 @@ void main() {
   final intRes = IntPrefsResource('int');
   final doubleRes = DoublePrefsResource('double');
   final stringListRes = StringListPrefsResource('list');
-  test('adds one to input values', () {
+  test('adds one to input values', () async {
+    expect('', await stringRes.get());
     // final calculator = new Calculator();
     // expect(calculator.addOne(2), 3);
     // expect(calculator.addOne(-7), -6);
