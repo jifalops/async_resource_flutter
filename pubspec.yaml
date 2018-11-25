@@ -1,6 +1,6 @@
 name: async_resource_flutter
 description: Flutter plugin for async_resource. Automatically cache network resources and use them when offline.
-version: 0.1.0
+version: 0.1.1
 author: Jacob Phillips <jifalops@gmail.com>
 homepage: https://github.com/jifalops/async_resource_flutter
 
