@@ -4,8 +4,6 @@ import 'package:async_resource_flutter/src/helpers/streamed_state.dart';
 import 'package:async_resource_flutter/src/helpers/async_handlers.dart';
 
 /// An [InheritedWidget] that follows the provider pattern in Flutter.
-/// `InheritedModel` is not yet in the beta channel, but when it is this will
-/// be deprecated and a class named `ResourceModel` take its place.
 class ResourceProvider<T> extends InheritedWidget {
   ResourceProvider({Key key, @required this.resource, @required Widget child})
       : super(key: key, child: child);
@@ -13,7 +11,8 @@ class ResourceProvider<T> extends InheritedWidget {
   final StreamedResource<T> resource;
 
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) => true;
+  bool updateShouldNotify(ResourceProvider old) =>
+      old.resource.data != resource.data;
 
   static StreamedResource of(BuildContext context) =>
       (context.inheritFromWidgetOfExactType(ResourceProvider)
@@ -61,7 +60,7 @@ class ResourceWidget<T> extends StatelessWidget {
     final res = ResourceProvider.of(context);
     return StreamHandler<T>(
       stream: res.stream,
-      initialData: res.resource.data,
+      initialData: res.data,
       handler: builder,
       waiting: waiting,
     );

@@ -1,5 +1,4 @@
-import 'package:test/test.dart';
-
+import 'package:flutter_test/flutter_test.dart';
 import 'package:async_resource_flutter/async_resource_flutter.dart';
 
 void main() {
